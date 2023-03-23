@@ -11,7 +11,7 @@ export default function Home({setCurrentInstrument, currentInstrument}) {
         .then((r)=>r.json())
         .then((instruments)=>{
             setList(instruments)
-            setCurrentInstrument('dvdvdfbdgbdg')
+          
         })
     },[])
     

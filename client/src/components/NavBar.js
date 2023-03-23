@@ -28,7 +28,7 @@ export default function NavBar({user, setUser}) {
     
 
     <div className="menu">
-      <a href="#" class="menu-logo">
+      <a href="/" class="menu-logo">
       <h1>RentMyInstrument.org</h1>
       </a>
   
@@ -41,18 +41,18 @@ export default function NavBar({user, setUser}) {
             
         }}
         >
-        Home
+        HOME
         </NavLink>
         </li>
     
         <li><NavLink
-        to="/games"
+        to="/about"
         exact
         activeStyle={{
             color: "#599bb3",
         }}
         >
-        Games
+        ABOUT
         </NavLink></li>
       <li><NavLink
         to="/games"
@@ -61,7 +61,7 @@ export default function NavBar({user, setUser}) {
             color: "#599bb3",
         }}
         >
-        Games
+        HOW IT WORKS
         </NavLink></li>
 
         <li>
@@ -72,7 +72,7 @@ export default function NavBar({user, setUser}) {
                 color: "#599bb3",
             }}
             >
-            Games
+           LOGIN
            </NavLink>
       </li>
    

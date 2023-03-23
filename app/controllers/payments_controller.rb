@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
     def create 
         token = params[:stripeToken]
         charge = Stripe::Charge.create(
-        :amount => params[:product][:price],
+        :amount => params[:selectedInstrument][:price],
         :currency => 'USD',
         :description => 'My Payment Wall',
         :source => token,

@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import StripeCheckout from 'react-stripe-checkout'
+import { InstrumentContext } from './SelectedInstrument';
 
 export default function Checkout() {
     
@@ -8,6 +9,7 @@ export default function Checkout() {
         name: "Example Product",
         price: 19.99,
       });
+    const { selectedInstrument, setSelectedInstrument} = useContext(InstrumentContext)
     
       const handleToken = async (token) => {
         const response = await fetch("/api/payment", {
@@ -19,7 +21,7 @@ export default function Checkout() {
           
           body: JSON.stringify({
             token,
-            product,
+            selectedInstrument,
           }),
         });
         const data = await response.json();
@@ -29,13 +31,13 @@ export default function Checkout() {
     
       return (
         <div>
-          <h1>{product.name}</h1>
-          <h3>Price: ${product.price}</h3>
+          <h1>{selectedInstrument.name}</h1>
+          <h3>Price: ${selectedInstrument.price}</h3>
           <StripeCheckout
             stripeKey={apiKey}
             token={handleToken}
-            amount={product.price * 100}
-            name={product.name}
+            amount={selectedInstrument.price * 100}
+            name={selectedInstrument.name}
             billingAddress
             shippingAddress
            
