@@ -16,8 +16,8 @@ export default function NavBar({user, setUser}) {
   }
   
   return (
-    <div className='container'>
-      <div><nav class="menu-container">
+    <div className=' menu-container fixed-top'>
+      <div><nav className="container">
 
     <input type="checkbox" aria-label="Toggle menu" />
     <span></span>
@@ -55,7 +55,7 @@ export default function NavBar({user, setUser}) {
         ABOUT
         </NavLink></li>
       <li><NavLink
-        to="/games"
+        to="/howitworks"
         exact
         activeStyle={{
             color: "#599bb3",
@@ -66,7 +66,7 @@ export default function NavBar({user, setUser}) {
 
         <li>
             <NavLink
-            to="/games"
+            to="/login"
             exact
             activeStyle={{
                 color: "#599bb3",

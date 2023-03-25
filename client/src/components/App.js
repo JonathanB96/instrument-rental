@@ -7,6 +7,9 @@ import Instrument from './Instrument';
 import Checkout from './Checkout';
 import About from './About';
 import HowItWorks from './HowItWorks';
+import Login from './Login';
+import Signup from './Signup';
+import Footer from './Footer';
 function App() {
   const [currentInstrument, setCurrentInstrument]= useState("dfg")
   return (
@@ -31,7 +34,14 @@ function App() {
         <Route exact path="/checkout">
            <Checkout/>
         </Route>
+        <Route exact path="/login">
+           <Login/>
+        </Route>
+        <Route exact path="/signup">
+           <Signup/>
+        </Route>
        </Switch>
+       <Footer/>
      
     </div>
   );
