@@ -6,9 +6,9 @@ export default function Instrument({open, children, onClose}) {
   return (
     <div className='overlay'>
        <div className='instrument'>
-     <button onClick={onClose}>X</button>
-      {children}
-    </div>
+        <button onClick={onClose}>X</button>
+        {children}
+      </div>
     </div>
    
   )

@@ -21,7 +21,7 @@ export default function InstrumentCard({instrument, setCurrentInstrument, curren
     
     <div className='card'onClick={handleClick}>
        
-        <img src={instrument.image_url}/>
+        <img src={instrument.image_url} className="instru-img"/>
        
         <p>{instrument.name}</p>
         <p>${instrument.price}/mo</p>
